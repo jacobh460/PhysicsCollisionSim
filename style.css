@@ -1,0 +1,20 @@
+button{
+  border-width: 0px;
+  background-color:#242221;
+  color:white;
+  border-radius:5px;
+  font-size:15px;
+  padding:10px;
+  cursor:pointer;
+
+  user-select:none;
+}
+
+body{
+  background-color:#403D3C;
+}
+
+
+div{
+  display:inline;
+}
