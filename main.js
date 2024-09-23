@@ -1,9 +1,7 @@
 //Jacob 2022
 //Code for user input
 
-var addObjectBtn = document.getElementById("addObjectBtn");
 var runButton = document.getElementById("startStopBtn");
-var editButtons = document.getElementById("editObjectButtons");
 
 //drawing
 var simCanvas = document.getElementById("simCanvas");
@@ -23,6 +21,7 @@ function pointInBox(x, y, box)
 }
 //show editing buttons and hide add object button
 function showEditButtons() {
+  return;
   addObjectBtn.hidden = true;
   for (var i = 0; i < editButtons.children.length; i++) {
     editButtons.children[i].hidden = false;
@@ -30,6 +29,7 @@ function showEditButtons() {
 }
 //hide all buttons, exluding start/stop
 function hideExtraButtons() {
+  return;
   addObjectBtn.hidden = true;
   for (var i = 0; i < editButtons.children.length; i++) {
     editButtons.children[i].hidden = true;
@@ -37,6 +37,7 @@ function hideExtraButtons() {
 }
 //hide edit buttons and show add object button
 function hideEditButtons() {
+  return;
   addObjectBtn.hidden = false;
   for (var i = 0; i < editButtons.children.length; i++) {
     editButtons.children[i].hidden = true;
@@ -101,16 +102,13 @@ simCanvas.addEventListener("mouseup", function(event) {
   clearSelection();
 });
 
-addObjectBtn.addEventListener("click", function() {
-  hand = !hand;
-});
 runButton.addEventListener("click", function() {
   var selectedObject = selectedElement == null ? null : selectedElement.value;
   //change Start/Stop button text and store whether physics should be running
   if (running) {
     runButton.innerText = "Start";
     running = false;
-    addObjectBtn.hidden = false;
+    //addObjectBtn.hidden = false;
   }
   else {
     runButton.innerText = "Stop";
